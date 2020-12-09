@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>esembico</title>
+
+	<link rel="stylesheet" type="text/css" href="http://static.esembico.de/css/style.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="proto">
+	<a href="http://esembico.de/" class="proto logo">ESEMBICO</a>
+	<div class="proto menu-toggle"></div>
+	<nav>
+		<ul>
+			<li><a class="proto" href="index.html">Home</a></li>
+			<li><a class="proto" href="team.html">Team</a></li>
+			<li><a class="proto" href="robotics.html">Robotics</a></li>
+			<li><a class="proto" href="coding.html">Coding</a></li>
+			<li><a class="proto active" href="proto.html">Proto</a></li>
+			<li><a class="proto" href="contact.html">Contact</a></li>
+			<li><a class="proto" href="rec.html">Rec</a></li>
+		</ul>
+	</nav>
+	<div class="clearfix"></div>
+<!-- Google Translator -->
+<div id="google_translate_element">
+	<script type="text/javascript">function googleTranslateElementInit(){
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages : 'de,it,pl,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+	</script>
+	<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+	</script>
+</div>
+
+</header>
+
+<!-- Image -->
+<div class="row">
+	<div class="image">
+		<img src="pics/proto/1.webp" style="max-width:100%" alt="proto_1">
+	</div>
+	<div class="image">
+		<img src="pics/proto/2.jpg" style="max-width:100%" alt="proto_2">
+	</div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+	<div class="main-main proto">
+		<div class="container proto">
+			<div class="card">
+				<div class="imgBx">
+					<a href="protos/proto1.html"><img src="pics/proto/proto1a.PNG" style="max-width:100%" alt="proto1"></a>
+				</div>
+				<div class="contentBx">
+					<div class="content">
+						<h3>Proto 1</h3>
+						<h4>VBA Tool</h4>
+						<p>Challenge: <br> A lot of different data from excel files have to be copied, analyzed, formatted and saved.</p>
+						<p>Solution: <br> One file with vba code opens all files, copies the data, analyzes, compares, changes, formats and exports the data as new file(s).</p>
+						<p>Rough details: <br> The whole process is splitted into pieces:<br>1. Open files and copy the needed data<br>2. Analyzing, comparing and changing the data<br>3. Split and format the data and save it</p>
+						<p>Click/Tap the image for more details</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr class="hr proto">
+
+<div class="row">
+	<div class="main-main proto">
+		<div class="container proto">
+			<div class="card">
+				<div class="imgBx">
+					<a href="https://tixi-chatbot.herokuapp.com/" target="_blank"><img src="pics/proto/proto2.jpg" style="max-width:100%" alt="proto2"></a>
+				</div>
+				<div class="contentBx">
+					<div class="content">
+						<h3>Proto 2</h3>
+						<h4>Chatbot (Python)</h4>
+						<p>Challenge: <br>A conversation partner is needed for support/help.</p>
+						<p>Solution: <br>Build and train a chatbot.</p>
+						<p>Rough details:<br>Visit the udemy platform (link in rec) and get the course "Create a Python Powered Chatbot in Under 60 Minutes"</p>
+						<p>Click/Tap the image for more details</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr class="hr proto">
+
+<!-- Footer -->
+<footer class="proto">
+	<h5><a class="proto" href="http://esembico.de/">esembico</a></h5>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.menu-toggle').click(function(){
+				$('.menu-toggle').toggleClass('active')
+				$('nav').toggleClass('active')
+		})
+	})
+	</script>
+
+</body>
+</html>

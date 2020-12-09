@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>esembico</title>
+
+	<link rel="stylesheet" type="text/css" href="http://static.esembico.de/css/style.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<header class="home">
+<div>
+	<a href="http://esembico.de/" class="home logo">ESEMBICO</a>
+</div>
+	<div class="home menu-toggle"></div>
+	<nav>
+		<ul>
+			<li><a class="home active" href="index.html">Home</a></li>
+			<li><a class="home" href="team.html">Team</a></li>
+			<li><a class="home" href="robotics.html">Robotics</a></li>
+			<li><a class="home" href="coding.html">Coding</a></li>
+			<li><a class="home" href="proto.html">Proto</a></li>
+			<li><a class="home" href="contact.html">Contact</a></li>
+			<li><a class="home" href="rec.html">Rec</a></li>
+		</ul>
+	</nav>
+	<div class="clearfix"></div>
+<!-- Google Translator -->
+<div id="google_translate_element">
+	<script type="text/javascript">function googleTranslateElementInit(){
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages : 'de,it,pl,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+	</script>
+	<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+	</script>
+</div>
+
+</header>
+
+<!-- Image -->
+<div class="row">
+	<div class="image imgBx">
+		<img src="pics/home/1.webp" style="max-width:100%" alt="home_1">
+	</div>
+	<div class="image">
+		<img src="pics/home/2.jpg" style="max-width:100%" alt="home_2">
+	</div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+	<div class="main-main home">
+		<h3>We are creating the project esembico</h3>
+		<p>The project is about Robotics and Prototyping.</p>
+		<p>People of different ages are involved in the project.</p>
+		<p>The aim is to acquire the knowledge to learn all the needed things of hardware, electronics and software to be able to build a functional private robot.</p>
+		<p>The acquired knowledge can be applied in the area of creating websites, shops, games, apps, etc.</p>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="home">
+	<h5><a class="home" href="http://esembico.de/">esembico</a></h5>
+</footer>
+<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.menu-toggle').click(function(){
+				$('.menu-toggle').toggleClass('active')
+				$('nav').toggleClass('active')
+		})
+	})
+	</script>
+
+</body>
+</html>
