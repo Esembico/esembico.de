@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>esembico</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
 
-  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="proto">
+      <a href="http://esembico.de/" class="logo" id="proto">ESEMBICO</a>
+      <div class="menu-toggle" id="proto"></div>
+      <nav>
+        <ul>
+          <li><a id="proto" href="index.html">Home</a></li>
+          <li><a id="proto" href="team.html">Team</a></li>
+          <li><a id="proto" href="robotics.html">Robotics</a></li>
+          <li><a id="proto" href="coding.html">Coding</a></li>
+          <li><a id="proto" href="proto.html" class="active">Proto</a></li>
+          <li><a id="proto" href="contact.html">Contact</a></li>
+          <li><a id="proto" href="rec.html">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image" id="proto">
+        <img src="pics/proto/1.webp" style="max-width: 100%" alt="proto_1" />
+      </div>
+      <div class="image" id="proto">
+        <img src="pics/proto/2.jpg" style="max-width: 100%" alt="proto_2" />
+      </div>
+    </div>
 
-  <!-- Header -->
-      <header class="proto">
-        <a href="http://esembico.de/" class="logo" id="proto">ESEMBICO</a>
-        <div class="menu-toggle" id="proto"></div>
-        <nav>
-          <ul>
-            <li><a id="proto" href="index.html">Home</a></li>
-            <li><a id="proto" href="team.html">Team</a></li>
-            <li><a id="proto" href="robotics.html">Robotics</a></li>
-            <li><a id="proto" href="coding.html">Coding</a></li>
-            <li><a id="proto" href="proto.html" class="active">Proto</a></li>
-            <li><a id="proto" href="contact.html">Contact</a></li>
-            <li><a id="proto" href="rec.html">Rec</a></li>
-          </ul>
-        </nav>
-        <div class="clearfix"></div>
-      </header>
-  <!-- Image -->
-<div class="row">
-  <div class="image" id="proto">
-    <img src="pics/proto/1.webp" style="max-width:100%" alt="proto_1">
-  </div>
-  <div class="image" id="proto">
-    <img src="pics/proto/2.jpg" style="max-width:100%" alt="proto_2">
-  </div>
-</div>
-
-<!-- The flexible grid (content) -->
-<div class="row">
-<div class="main-main" id="proto_1">
-		<h4>1. Open files from folder and copy the needed data</h4>
-			<ul>
-				<li>Create the folder on your drive c:</li>
-				<li>Insert the import files to your input folder</li>
-				<li>Create the main vba file with the sub procedure</li>
-				<li>Create a button and assign to the name of the procedure</li>
-				<li>Test it</li>
-			</ul>
-			<pre class="python">
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="main-main" id="proto_1">
+        <h4>1. Open files from folder and copy the needed data</h4>
+        <ul>
+          <li>Create the folder on your drive c:</li>
+          <li>Insert the import files to your input folder</li>
+          <li>Create the main vba file with the sub procedure</li>
+          <li>Create a button and assign to the name of the procedure</li>
+          <li>Test it</li>
+        </ul>
+        <pre class="python">
 from selenium import webdriver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--disable-web-security')
@@ -68,29 +70,32 @@ browser.quit()
 file = open('test.txt', 'w')
 file.write(result)
 file.close()
-			</pre>
-</div>
-</div>
-<hr class="hr" id="proto">
+			</pre
+        >
+      </div>
+    </div>
+    <hr class="hr" id="proto" />
 
+    <!-- Footer -->
+    <footer class="proto">
+      <h5><a id="proto" href="http://esembico.de/">esembico</a></h5>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/highlighter.js"></script>
+    <script src="js/languages/python.js"></script>
 
-<!-- Footer -->
-<footer class="proto">
-  <h5><a id="proto" href="http://esembico.de/">esembico</a></h5>
-</footer>
-		<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-	<script src="js/highlighter.js"></script>
-	<script src="js/languages/python.js"></script>
-	
-		<script type="text/javascript">
-			$(document).ready(function(){
-				highlight();
-				$('.menu-toggle').click(function(){
-					$('.menu-toggle').toggleClass('active')
-					$('nav').toggleClass('active')
-			})
-		})
-		</script>
-
-</body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        highlight();
+        $(".menu-toggle").click(function () {
+          $(".menu-toggle").toggleClass("active");
+          $("nav").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
 </html>
