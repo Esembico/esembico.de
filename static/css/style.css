@@ -6,6 +6,56 @@ body {
   color: white;
   top: 0px !important;
 }
+
+body.home {
+  --main-bg-color: #6600ff;
+  --secondary-bg-color: #ff0066;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
+body.team {
+  --main-bg-color: #666666;
+  --secondary-bg-color: #000000;
+  --logo-color: #ffffff;
+  --main-color: #ffffff;
+}
+
+body.robotics {
+  --main-bg-color: #003380;
+  --secondary-bg-color: #00b3b3;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
+body.coding {
+  --main-bg-color: #006600;
+  --secondary-bg-color: #00ff00;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
+body.proto {
+  --main-bg-color: #cc5200;
+  --secondary-bg-color: #ffcc00;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
+body.contact {
+  --main-bg-color: #b30000;
+  --secondary-bg-color: #ff6600;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
+body.rec {
+  --main-bg-color: #663300;
+  --secondary-bg-color: #ff6600;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
 p {
   font-size: 15px;
 }
@@ -28,6 +78,7 @@ header {
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-variant: small-caps;
+  background-color: var(--main-bg-color);
 }
 header #google_translate_element {
   position: relative;
@@ -58,27 +109,6 @@ header {
   top: 0px !important;
 }
 
-header.home {
-  background: #6600ff;
-}
-header.team {
-  background: #666666;
-}
-header.robotics {
-  background: #003380;
-}
-header.coding {
-  background: #006600;
-}
-header.proto {
-  background: #cc5200;
-}
-header.contact {
-  background: #b30000;
-}
-header.rec {
-  background: #663300;
-}
 header a.logo {
   height: 60px;
   font-size: 30px;
@@ -91,55 +121,16 @@ header a.logo {
   text-decoration: none;
   font-family: "Roboto";
   letter-spacing: 4px;
+  color: var(--logo-color);
+  border-top: double var(--logo-color);
+  border-bottom: double var(--logo-color);
+  text-shadow: 5px 5px 2px black;
 }
 header a.logo:hover {
   transition: 4s;
   transform: translateX(50px);
   opacity: 0;
   filter: blur(5px);
-}
-
-header a.home.logo {
-  color: #ff0066;
-  border-top: double #ff0066;
-  border-bottom: double #ff0066;
-  text-shadow: 5px 5px 2px black;
-}
-header a.team.logo {
-  color: #ffffff;
-  border-top: double #ffffff;
-  border-bottom: double #ffffff;
-  text-shadow: 5px 5px 2px black;
-}
-header a.robotics.logo {
-  color: #00b3b3;
-  border-top: double #00b3b3;
-  border-bottom: double #00b3b3;
-  text-shadow: 5px 5px 2px black;
-}
-header a.coding.logo {
-  color: #00ff00;
-  border-top: double #00ff00;
-  border-bottom: double #00ff00;
-  text-shadow: 5px 5px 2px black;
-}
-header a.proto.logo {
-  color: #ffcc00;
-  border-top: double #ffcc00;
-  border-bottom: double #ffcc00;
-  text-shadow: 5px 5px 2px black;
-}
-header a.contact.logo {
-  color: #ff6600;
-  border-top: double #ff6600;
-  border-bottom: double #ff6600;
-  text-shadow: 5px 5px 2px black;
-}
-header a.rec.logo {
-  color: #ff6600;
-  border-top: double #ff6600;
-  border-bottom: double #ff6600;
-  text-shadow: 5px 5px 2px black;
 }
 nav {
   float: right;
@@ -164,63 +155,15 @@ nav ul li a {
   font-weight: bold;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
-nav ul li a.home.active,
-nav ul li a.home:hover {
-  background: #ff0066;
-  color: #fff;
+nav ul li a.active,
+nav ul li a:hover {
+  background: var(--secondary-bg-color);
+  color: var(--main-color);
   transition: 0.5s;
-  box-shadow: 0 0 5px #ff0066, 0 0 25px #ff0066, 0 0 50px #ff0066,
-    0 0 200px #ff0066;
+  box-shadow: 0 0 5px var(--secondary-bg-color),
+    0 0 25px var(--secondary-bg-color), 0 0 50px var(--secondary-bg-color),
+    0 0 200px var(--secondary-bg-color);
 }
-nav ul li a.team.active,
-nav ul li a.team:hover {
-  background: #000000;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #000000, 0 0 25px #000000, 0 0 50px #000000,
-    0 0 200px #000000;
-}
-nav ul li a.robotics.active,
-nav ul li a.robotics:hover {
-  background: #00b3b3;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #00b3b3, 0 0 25px #00b3b3, 0 0 50px #00b3b3,
-    0 0 200px #00b3b3;
-}
-nav ul li a.coding.active,
-nav ul li a.coding:hover {
-  background: #00ff00;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #00ff00, 0 0 25px #00ff00, 0 0 50px #00ff00,
-    0 0 200px #00ff00;
-}
-nav ul li a.proto.active,
-nav ul li a.proto:hover {
-  background: #ffcc00;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #ffcc00, 0 0 25px #ffcc00, 0 0 50px #ffcc00,
-    0 0 200px #ffcc00;
-}
-nav ul li a.contact.active,
-nav ul li a.contact:hover {
-  background: #ff6600;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #ff6600, 0 0 25px #ff6600, 0 0 50px #ff6600,
-    0 0 200px #ff6600;
-}
-nav ul li a.rec.active,
-nav ul li a.rec:hover {
-  background: #ff6600;
-  color: #fff;
-  transition: 0.5s;
-  box-shadow: 0 0 5px #ff6600, 0 0 25px #ff6600, 0 0 50px #ff6600,
-    0 0 200px #ff6600;
-}
-
 @media (max-width: 1200px) {
   header {
     margin: 3px;
@@ -243,34 +186,8 @@ nav ul li a.rec:hover {
     cursor: pointer;
     text-align: center;
     font-size: 30px;
-  }
-  .home.menu-toggle {
-    background: #6600ff;
-    color: #ff0066;
-  }
-  .team.menu-toggle {
-    background: #666666;
-    color: #000000;
-  }
-  .robotics.menu-toggle {
-    background: #003380;
-    color: #00b3b3;
-  }
-  .coding.menu-toggle {
-    background: #006600;
-    color: #00ff00;
-  }
-  .proto.menu-toggle {
-    background: #cc5200;
-    color: #ffcc00;
-  }
-  .contact.menu-toggle {
-    background: #b30000;
-    color: #ff6600;
-  }
-  .rec.menu-toggle {
-    background: #663300;
-    color: #ff6600;
+    background: var(--main-bg-color);
+    color: var(--secondary-bg-color);
   }
   .menu-toggle:before {
     content: "\f0c9";
@@ -306,20 +223,9 @@ nav ul li a.rec:hover {
   padding: 10px;
   box-sizing: border-box;
   border-radius: 4px;
+  background-color: var(--main-bg-color);
 }
-.main-main.home {
-  background-color: #6600ff;
-}
-.main-main.proto {
-  background-color: #cc5200;
-}
-.main-main.proto_1 {
-  background-color: #000000;
-}
-.main-main.contact {
-  background-color: #b30000;
-}
-.robotics-grid-container {
+.grid-container {
   flex: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -328,83 +234,30 @@ nav ul li a.rec:hover {
   margin: auto;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #003380;
+  background-color: var(--main-bg-color);
   padding: 10px;
 }
-.robotics-grid-item-header {
+.grid-item-header {
   border: 1px solid #00b3b3;
   padding: 20px;
   text-align: center;
-  background: #00b3b3;
+  background: var(--secondary-bg-color);
   font-variant: petite-caps;
   font-weight: bold;
 }
-.robotics-grid-item {
-  border: 2px solid #00b3b3;
+.grid-item {
+  border: 2px solid var(--secondary-bg-color);
   padding: 20px;
   text-align: center;
 }
-.coding-grid-container {
-  flex: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  grid-gap: 5px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #006600;
-  padding: 10px;
-}
-.coding-grid-item-header {
-  border: 1px solid #00ff00;
-  padding: 20px;
-  text-align: center;
-  background: #00ff00;
-  font-variant: petite-caps;
-  font-weight: bold;
-}
-.coding-grid-item {
-  border: 2px solid #00ff00;
-  padding: 20px;
-  text-align: center;
-}
-.rec-grid-container {
-  flex: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  grid-gap: 5px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #663300;
-  padding: 10px;
-}
-.rec-grid-item-header {
-  border: 1px solid #ff6600;
-  padding: 20px;
-  text-align: center;
-  background: #ff6600;
-  font-variant: petite-caps;
-  font-weight: bold;
-}
-.rec-grid-item {
-  border: 2px solid #ff6600;
-  padding: 20px;
-  text-align: center;
-}
-.rec-grid-item ul {
-  text-align: left;
-}
-.side.team {
+.side {
   flex: 20%;
-  background-color: #666666;
+  background-color: var(--main-bg-color);
   padding: 10px;
 }
-.main.team {
+.main {
   flex: 80%;
-  background-color: #666666;
+  background-color: var(--main-bg-color);
   padding: 10px;
 }
 .image {
@@ -417,22 +270,9 @@ nav ul li a.rec:hover {
   border-radius: 4px;
   background-color: #000000;
 }
-.team_member {
-  max-width: 100%;
-  height: 100%;
-  flex: 100%;
-  background-color: #666666;
-  padding: 1px;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-.hr.proto {
+.hr {
   max-width: 1200px;
-  border-bottom: double #ffcc00;
-}
-.hr.contact {
-  max-width: 1200px;
-  border-bottom: double #ff6600;
+  border-bottom: double var(--secondary-bg-color);
 }
 footer {
   max-width: 1200px;
@@ -440,56 +280,11 @@ footer {
   text-align: center;
   box-sizing: border-box;
   border-radius: 4px;
+  background-color: var(--main-bg-color);
 }
-footer.home {
-  background: #6600ff;
-}
-footer.team {
-  background: #666666;
-}
-footer.robotics {
-  background: #003380;
-}
-footer.coding {
-  background: #006600;
-}
-footer.proto {
-  background: #cc5200;
-}
-footer.contact {
-  background: #b30000;
-}
-footer.rec {
-  background: #663300;
-}
-
-footer a.home {
+footer a {
   text-decoration: none;
-  color: #ff0066;
-}
-footer a.team {
-  text-decoration: none;
-  color: #000000;
-}
-footer a.robotics {
-  text-decoration: none;
-  color: #00b3b3;
-}
-footer a.coding {
-  text-decoration: none;
-  color: #00ff00;
-}
-footer a.proto {
-  text-decoration: none;
-  color: #ffcc00;
-}
-footer a.contact {
-  text-decoration: none;
-  color: #ff6600;
-}
-footer a.rec {
-  text-decoration: none;
-  color: #ff6600;
+  color: var(--secondary-bg-color);
 }
 .flip-card {
   background-color: transparent;
@@ -538,7 +333,7 @@ footer a.rec {
 }
 .container.contact h2 {
   width: 100%;
-  color: #ff6600;
+  color: var(--secondary-bg-color);
   text-align: center;
   margin-bottom: 5px;
 }
@@ -559,7 +354,7 @@ footer a.rec {
   position: relative;
   width: 100%;
   height: 30px;
-  color: #ff6600;
+  color: var(--secondary-bg-color);
 }
 .container.contact .row100 .inputBox input,
 .container.contact .row100 .inputBox.textarea textarea {
@@ -597,7 +392,7 @@ footer a.rec {
   display: block;
   width: 100%;
   height: 2px;
-  background: #ff6600;
+  background: var(--secondary-bg-color);
   transition: 0.5s;
   border-radius: 2px;
   pointer-events: none;
@@ -630,15 +425,16 @@ input[type="submit"] {
   padding: 7px 35px;
   cursor: pointer;
   outline: none;
-  background: #ff6600;
+  background: var(--secondary-bg-color);
   color: #ffffff;
   font-size: 18px;
   border-radius: 2px;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 2px;
-  box-shadow: 0 0 5px #ff6600, 0 0 25px #ff6600, 0 0 50px #ff6600,
-    0 0 200px #ff6600;
+  box-shadow: 0 0 5px var(--secondary-bg-color),
+    0 0 25px var(--secondary-bg-color), 0 0 50px var(--secondary-bg-color),
+    0 0 200px var(--secondary-bg-color);
 }
 .container.proto {
   position: relative;
