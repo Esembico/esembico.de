@@ -250,6 +250,9 @@ nav ul li a:hover {
   padding: 20px;
   text-align: center;
 }
+.grid-item ul {
+  text-align: left;
+}
 .side {
   flex: 20%;
   background-color: var(--main-bg-color);
