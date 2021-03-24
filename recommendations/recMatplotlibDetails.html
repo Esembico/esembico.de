@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/style.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rec">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="active" href="/recommendations">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="../static/images/rec/1.webp"
+          style="max-width: 100%"
+          alt="rec_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../static/images/rec/2.jpg"
+          style="max-width: 100%"
+          alt="rec_2"
+        />
+      </div>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="main-main">            
+          <h4>Official Site</h4>
+          <p> <a class="link" href="https://matplotlib.org/">matplotlib.org</a></p>
+            
+          <h4>How to use with jupyter</h4>
+            <ul>
+                <li>%matplotlib inline - for grafics which can be saved automatically</li>
+                <li>%matplotlib notebook - interactive grafic</li>
+                <li>within interactive grafic you can: zoom, shift, scale, download and save</li>
+                <li>fig - figure of the whole grafic</li>
+                <li>ax - axes of the graph</li>
+                <li>dpi - resolution of the grafic</li>
+                <li>fig.savefig("graph_1.png") - saves grafic as image</li>
+                <li>fig.savefig("graph_1.png"), transpartent = True - for transparent and not white image</li>
+                <li>ax.set_title("Title") - titel for the grafic</li>
+                <li>ax.set_xlabel("xlabel") - description for the x axe</li>
+                <li>ax.set_ylabel("ylabel") - description for the y axe</li>
+                <li>ax.set_ylim([0, 10]) - set range for the y axe</li>
+                <li>ax.set_xlim([0, 10]) - set range for the x axe</li>
+                <li>ax.legend() - show legend for the lines</li>
+                <li>ax.legend(loc=1) - show legend in the upper right corner</li>
+                <li>With seaborn (library for graphics in Python) you can display better graphics</li>
+                <li>sns.set_style("whitegrid") - differnt views possible with white, whitegrid, dark, darkgrid</li>
+
+
+            </ul>
+          <h4>Example</h4>
+            <p>
+                %matplotlib inline<br>
+                import matplotlib.pyplot as plt<br>
+                #or seaborn with import seaborn as sns<br>
+                fig, ax = plt.subplots()<br>
+                fig.dpi = 100<br>
+                x = [1, 2, 3, 4, 5, 6, 7, 8]<br>
+                y = [2, 4, 5, 3, 4, 5, 7, 2]<br>
+                y2 = [4, 4, 7, 10, 4, 6, 10, 4]<br>
+                ax.plot(x, y, label="new customers")<br>
+                ax.plot(x, y2, label="new prospective customers")<br>
+                ax.legend(loc=4)<br>
+                ax.set_ylim([0, 11])<br>
+                ax.set_xlim([1, 8])<br>
+                ax.set_title("Performance over time")<br>
+                ax.set_xlabel("Date")<br>
+                ax.set_ylabel("Number")<br>
+                plt.show()
+            </p>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
