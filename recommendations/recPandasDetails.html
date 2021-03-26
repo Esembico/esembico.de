@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/style.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rec">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="active" href="/recommendations">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="../static/images/rec/1.webp"
+          style="max-width: 100%"
+          alt="rec_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../static/images/rec/2.jpg"
+          style="max-width: 100%"
+          alt="rec_2"
+        />
+      </div>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="main-main">            
+          <h4>Official Site</h4>
+          <p> <a class="link" href="https://pandas.pydata.org/">pandas.pydata.org</a></p>
+            
+          <h4>How to use with jupyter</h4>
+            <ul>
+                <li>import panda as pd - </li>
+                <li>df = pd.read_excel("Excelfile.xlsx") - read excel file</li>
+                <li>df.head() - shows the head and the first 5 rows of the file</li>
+                <li>df - shows the file content in a table</li>
+                <li>df.info() - shows the details of the data</li>
+                <li>df["incomes"] - shows only the data of the column</li>
+                <li>df["year"] != "sum:" - shows True or False</li>
+                <li>df2 = df[df["year"] != "sum:"] - deletes the row with "Sum:" and save the data in a new dataframe variable</li>
+                <li>df3 = df2.drop(8) - deletes the row 8 solution 1</li>
+                <li>df3 = df2[df2["year"].notnull()] - deletes the row 8 solution 2</li>
+                <li>profit = df3["incomes"] - df3["outcomes"] - calculate the values and save in the variable</li>
+                <li>ax.plot(df3["year"], profit, label="profit") - shows the profit</li>
+                <li>for index, row in df3.iterrows(): print row - shows the data of the data frame</li>
+                <li>print(row["year"]) - filters and shows the data of the rows</li>
+                <li>df.values - shows the data in an array</li>
+                <li>df.values[0] - shows the first row of the array</li>
+                <li>df.values[0][0] - shows the first value in the first row</li>
+                <li>print(len(df)) - shows the number of rows</li>
+                <li>print(len(df[df["year"] == 2012])) - shows the number of rows with the value 2012 for year</li>
+                <li>df = pd.read_excel("Excelfile.xlsx", sheet_name=["Tabelle1", "Tabelle2"]) - reads excel file with the 2 sheets and outputs a dictionary</li>
+                <li>df_Tabelle1 = df["Tabelle1"] - shows only the sheet Tabelle1</li>
+
+            </ul>
+          <h4>Example</h4>
+            <p><strong>Filter the data</strong></p>
+            <p>
+                import pandas as pd<br>
+                df = pd.read_excel("Excelfile.xlsx")<br>
+                df.head()<br>
+                df<br>
+                df["incomes"]<br>
+                df["year"] != "sum:"<br>
+                df2 = df[df["year"] != "sum:"]<br>
+                df3 = df2[df2["year"].notnull()]<br>
+                profit = df3["incomes"] - df3["expenses"]<br>
+            </p>
+            <p><strong>Show the data</strong></p>
+            <p>
+                %matplotlib inline<br>
+                import matplotlib.pyplot as plt<br>
+                import seaborn as sns<br>
+                fig, ax = plt.subplots()<br>
+                fig.dpi = 80<br>
+                ax.plot(df3["year"], df3["incomes"], label ="incomes")<br>
+                ax.plot(df3["year"], df3["expenses"], label ="expenses")<br>
+                ax.plot(df3["year"], profit, label="profit")<br>
+                ax.legend()<br>
+                plt.show()<br>
+            </p>
+            <p><strong>Iterate through dataframe with your own python code</strong></p>
+            <p>
+                for index, row in df3.iterrows():<br>
+                print(row)<br>
+            </p>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
