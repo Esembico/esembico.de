@@ -58,7 +58,7 @@
             
           <h4>How to use with jupyter</h4>
             <ul>
-                <li>import panda as pd - </li>
+                <li>import pandas as pd - import the pandas module</li>
                 <li>df = pd.read_excel("Excelfile.xlsx") - read excel file</li>
                 <li>df.head() - shows the head and the first 5 rows of the file</li>
                 <li>df - shows the file content in a table</li>
@@ -100,12 +100,13 @@
                 import matplotlib.pyplot as plt<br>
                 import seaborn as sns<br>
                 fig, ax = plt.subplots()<br>
-                fig.dpi = 80<br>
+                fig.dpi = 100<br>
                 ax.plot(df3["year"], df3["incomes"], label ="incomes")<br>
                 ax.plot(df3["year"], df3["expenses"], label ="expenses")<br>
                 ax.plot(df3["year"], profit, label="profit")<br>
                 ax.legend()<br>
                 plt.show()<br>
+                <img src="/static/images/rec/Pandas_Example.png" width="550px" height="345px" alt="Pandas_Example"/> 
             </p>
             <p><strong>Iterate through dataframe with your own python code</strong></p>
             <p>

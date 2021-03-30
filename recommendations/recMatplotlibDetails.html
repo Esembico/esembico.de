@@ -69,13 +69,38 @@
                 <li>ax.set_title("Title") - titel for the grafic</li>
                 <li>ax.set_xlabel("xlabel") - description for the x axe</li>
                 <li>ax.set_ylabel("ylabel") - description for the y axe</li>
-                <li>ax.set_ylim([0, 10]) - set range for the y axe</li>
-                <li>ax.set_xlim([0, 10]) - set range for the x axe</li>
-                <li>ax.legend() - show legend for the lines</li>
-                <li>ax.legend(loc=1) - show legend in the upper right corner</li>
+                <li>ax.set_ylim([0, 10]) - sets range for the y axe</li>
+                <li>ax.set_xlim([0, 10]) - sets range for the x axe</li>
+                <li>ax.legend() - shows legend for the lines</li>
+                <li>ax.legend(loc=1) - shows legend in the upper right corner</li>
                 <li>With seaborn (library for graphics in Python) you can display better graphics</li>
                 <li>sns.set_style("whitegrid") - differnt views possible with white, whitegrid, dark, darkgrid</li>
-
+                <li>ax.plot(x, y, label="new customers", color="green") - changes line color with the attribute color, you can also write red as (1, 0, 0)</li>
+                <li>ax.set_facecolor((0.95, 0.95, 0.95)) - changes background color to grey</li>
+                <li>ax.plot(x, y, label="Label", linestyle=":") - sets different line styles with linestyle (":", "-.", "--")</li>
+                <li>ax.plot(x, y, label="Label", linewidth=4) - sets the width of the line</li>
+                <li>ax.plot(x, y, label="Label", marker="o") - sets a marker for the values</li>
+                <li>ax.plot(x, y, label="Label", marker="o", markerfacecolor=(1, 0, 0)) - sets color for the marker</li>
+                <li>ax.plot(x, y, label="Label", marker="o", markersize=8) - sets the size of the marker</li>
+                <li>ax.set_xticks([1, 3, 5]) - shows only the requested numbers</li>
+                <li>ax.set_xticklabels(["year 1", "year 2", "year 3"]) - shows the requested labels</li>
+                <li>ax.set_xticklabels(["year 1"], rotation=45) - shows the requested labels rotated</li>
+                <li>ax.bar(x, y) - shows bar chart</li>
+                <li>ax.bar(x, y, tick_label=["year 1"]) - shows label for the bars</li>
+                <li>ax.bar(x, y, width=0.4) - changes the width of the single bars</li>
+                <li>ax.barh(x,  y) - shows a horizontal bar diagram</li>
+                <li>ax.bar(x, y, width=-0.4 align="edge")&nbsp;ax.bar(x, y2, width=0.4 align="edge")  - shows the bars in line; makes sense for to compared bars next to it</li>
+                <li>ax.pie([100, 50]) - shows a pie chart</li>
+                <li>ax.axis("equal") - shows a precise circle</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"]) - displays the labels</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], startangle=90) - rotates the circle</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], explode=[0, 0, 0.1]) - shows the third piece in focus</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], shadow=True) - shows a shadow</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%i") - shows the values in percent</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%.1f%%") - shows the comma values with percent character</li>
+                <li>ax.pie([100, 50], labels=["option 1", "option 2"], colors=[(1, 0, 0), (0, 1, 0)]) - define the colors for the pieces</li>
+                <li>ax.scatter([100, 50]) - shows a dot chart</li>
+                <li>fig, ax = plt.subplots(figsize=[5, 3]) - changes the size of the image and not the labels</li>
 
             </ul>
           <h4>Example</h4>
@@ -96,8 +121,45 @@
                 ax.set_title("Performance over time")<br>
                 ax.set_xlabel("Date")<br>
                 ax.set_ylabel("Number")<br>
-                plt.show()
+                plt.show()<br>
+                <img src="/static/images/rec/Matplotlib_Example.png" width="550px" height="345px" alt="Matplotlib_Example_Example"/>
             </p>
+          <h4>Example 2 (Stacked barplot)</h4>
+            <p>
+              %matplotlib inline<br>
+              import matplotlib.pyplot as plt<br>
+              import seaborn as snd<br>
+              fig, ax = plt.subplots()<br>
+              fig.dpi = 100<br>
+              x = [2011, 2013, 2015]<br>
+              y = [1050, 1400, 1300] #profit product 1<br>
+              y2 = [200, 100, 200] #profit product 2<br>
+              ax.bar(x, y, label="profit 1", tick_label=["year 1", "year 2", "year 3"])<br>
+              ax.bar(x, y2, bottom=y, label= "profit 2")<br>
+              ax.legend()<br>
+              ax.set_title("bar chart")<br>
+              plt.show<br>
+              <img src="/static/images/rec/Matplotlib_Example2.png" width="550px" height="345px" alt="Matplotlib_Example_Example"/>
+            <h4>Example 3 (Pie chart)</h4>
+              <p>
+                %matplotlib inline<br>
+                import matplotlib.pyplot as plt<br>
+                import seaborn as sns<br>
+                fig, ax = plt.subplots()<br>
+                fig.dpi = 100<br>
+                seats = [311, 63, 193, 64]<br>
+                s = sum(seats)<br>
+                seats.append(s)<br>
+                ax.pie(seats,<br>
+                labels=["CDU", "Die Grünen", "SPD", "Die Linke", ""],<br>
+                colors=[(0, 0, 0), "#46962b", (1, 0, 0), "#BE3075", (1, 1, 1)])<br>
+                ax.axis("equal")<br>
+                ax.legend(loc=3)<br>
+                fig.savefig("Matplotlib_Example3.png")<br>
+                plt.show<br>
+                sns.set()<br>
+                <img src="/static/images/rec/Matplotlib_Example3.png" width="550px" height="345px" alt="Matplotlib_Example_Example"/>
+              </p>
         </div>
       </div>
     <!-- Footer -->
