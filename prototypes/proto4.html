@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="proto">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a class="active" href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/recommendations">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="/static/images/proto/1.webp"
+          style="max-width: 100%"
+          alt="proto_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="/static/images/proto/2.jpg"
+          style="max-width: 100%"
+          alt="proto_2"
+        />
+      </div>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="main-main" style="background-color: #000000">
+        <h4>Important:</h4>
+        <p class="important">Always try to get permission before scraping!<br>
+        If you make too many requests your IP Address could be blocked<br>
+        Every Website is unique, which means you have to code/adjust yours script<br>
+        Websites are changing, so you need to update your script over time</p>
+        <h4>1. Get the content from the internet with the module requests</h4>
+        <p>import requests<br>
+          r = requests.get("https://www.example.com")<br>
+          print(r.status_code) #check the status code<br>
+          print(r.headers) #show the header<br>
+          print(r.text) #show the raw text<br>
+        </p>
+        <h4>2. Grab the information from the data with the module bs4</h4>
+        <p>from bs4 import BeautifulSoup<br>
+          doc = BeautifulSoup(r.text, "html.parser")<br>
+          print(doc) #shows the html data<br>
+          doc.select(".card") #shows all elements with the class card<br>
+          for card in doc.select(".card"):<br>
+          emoji = card.select_one(".emoji").text #saves one emoji symbol<br>
+          content = card.select_one(".card-text").text #saves one card text<br>
+          <br>
+          print(emoji)<br>
+          print(content)<br>
+          <br>
+        </p>
+        <pre class="vba">
+Option Explicit
+Sub CopyDataFromFiles()
+
+'Initialize File System Object
+Set FSO = CreateObject("Scripting.FileSystemObject")
+          </pre>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/highlighter.js"></script>
+    <script src="/static/js/languages/vba.js"></script>
+    <script type="text/javascript">	
+      highlight();
+    </script>
+  </body>
+</html>
