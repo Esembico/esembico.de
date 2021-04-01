@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/style.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rec">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="active" href="/recommendations">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="../static/images/rec/1.webp"
+          style="max-width: 100%"
+          alt="rec_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../static/images/rec/2.jpg"
+          style="max-width: 100%"
+          alt="rec_2"
+        />
+      </div>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="main-main">            
+          <h4>Official Site</h4>
+          <p> <a class="link" href="https://scitools.org.uk/cartopy/docs/latest/#">scitools.org.uk/cartopy/docs/latest/</a></p>
+            
+          <h4>How to use with jupyter in anaconda</h4>
+            <ul>
+                <li>In Anaconda -> Environments -> Button Channels - add channel "conda-forge"</li>
+                <li>In Anaconda -> Environments -> left next to to button Channels - select "Not installed" and search for cartopy, activate "cartopy", click apply, click ok</li>
+                <li>osm_tiles = OSM() - usage of OpenStreetMap. Also available is GSM</li>
+                <li>plt.figure(figsize=(16, 16)) - creates new figure</li>
+                <li>ax = plt.axes(projection=osm_title.crs) - creates axes object</li>
+                <li>ax.set_extent([5.229, 15.952, 46.438, 56.097]) - creates germany</li>
+                <li>ax.add_image(osm_tiles, 7) - creates the osm data with the precision of 7 in a map</li>
+
+            </ul>
+          <h4>Example</h4>
+            <p><strong>Show Germany with OpenStreetMap</strong></p>
+            <p>                
+                df = pd.read_csv("file.csv")<br>
+                df.head()<br>
+                long = df["reclong"]<br>
+                lat = df["reclat"]<br>
+                <br>
+                import cartopy.crs as ccrs<br>
+                from cartopy.io.img_tiles import OSM<br>
+                import matplotlib.pyplot as plt<br>
+                osm_tiles = OSM()<br>
+                plt.figure(figsize=(16, 16))<br>
+                ax = plt.axes(projection=osm_title.crs)<br>
+                ax.set_extent([5.229, 15.952, 46.438, 56.097])<br>
+                ax.add_image(osm_tiles, 3)<br>
+                plt.show()<br>
+                import pan<br>                
+            </p>
+            
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
