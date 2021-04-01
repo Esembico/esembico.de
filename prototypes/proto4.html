@@ -56,14 +56,14 @@
         Every Website is unique, which means you have to code/adjust yours script<br>
         Websites are changing, so you need to update your script over time</p>
         <h4>1. Get the content from the internet with the module requests</h4>
-        <p>import requests<br>
+        <p class="python">import requests<br>
           r = requests.get("https://www.example.com")<br>
           print(r.status_code) #check the status code<br>
           print(r.headers) #show the header<br>
           print(r.text) #show the raw text<br>
         </p>
         <h4>2. Grab the information from the data with the module bs4</h4>
-        <p>from bs4 import BeautifulSoup<br>
+        <p class="python">from bs4 import BeautifulSoup<br>
           doc = BeautifulSoup(r.text, "html.parser")<br>
           print(doc) #shows the html data<br>
           doc.select(".card") #shows all elements with the class card<br>
@@ -74,14 +74,7 @@
           print(emoji)<br>
           print(content)<br>
           <br>
-        </p>
-        <pre class="vba">
-Option Explicit
-Sub CopyDataFromFiles()
-
-'Initialize File System Object
-Set FSO = CreateObject("Scripting.FileSystemObject")
-          </pre>
+        </p> 
       </div>
     </div>
 
