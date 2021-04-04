@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/style.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rec">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="active" href="/recommendations">Rec</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="../static/images/rec/1.webp"
+          style="max-width: 100%"
+          alt="rec_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../static/images/rec/2.jpg"
+          style="max-width: 100%"
+          alt="rec_2"
+        />
+      </div>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="main-main">            
+          <h4>Official Site</h4>
+          <p> <a class="link" href="https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20List.html">ipywidgets.readthedocs.io/en/stable//examples/Widget%20List.html</a></p>
+            
+          <h4>How to use widgets</h4>
+            <ul>
+                <li>IntSlider/FloatSlider/IntRangeSlider</li>
+                <li>Checkbox</li>
+                <li>Dropdown</li>
+                <li>RadioButtons</li>
+                <li>Text / Textarea</li>
+                <li>etc.</li>
+            </ul>
+
+            <h4>Example</h>
+              <p>1. read data from a csv file and show the head</p>
+              <p>import pandas as pd<br>
+                df = pd.read_csv("./../data/meteorite-landings.csv")<br>
+                df.head()</p>
+              <p>2. Save the data in variables (dataframes)</p>
+              <p>df2 = df[df["reclat"].notnull()]<br>
+                df3 = df2[df2["reclong"].notnull()]<br>
+                long = df3["reclong"]<br>
+                lat = df3["reclat"]<br>
+              </p>
+              <p>3. Show the relevant data in a picture/map/card</p>
+              <p>%matplotlib inline<br>
+                import matplotlib.pyplot as plt<br>
+                import cartopy.crs as ccrs<br>
+                import cartopy.feature as cfeature<br>
+                <br>
+                fig = plt.figure(figsize=(15, 20))<br>
+                ax = plt.axes(projection=ccrs.Robinson())<br>
+                <br>
+                ax.set_global()<br>
+                ax.coastlines(resolution="50m")<br>
+                <br>
+                ax.plot(long, lat, linestyle=" ", marker="X", transform=ccrs.PlateCarree(), color=(0, 0, 0), alpha=0.2)<br>
+                <br>
+                ax.add_feature(cfeature.OCEAN, zorder=0)<br>
+                ax.add_feature(cfeature.LAND, zorder=0)<br>
+                ax.add_feature(cfeature.BORDERS, zorder=0, edgecolor='gray')<br>
+                ax.gridlines()<br>
+                plt.show()
+              </p>
+
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
