@@ -56,25 +56,86 @@
         Every Website is unique, which means you have to code/adjust yours script<br>
         Websites are changing, so you need to update your script over time</p>
         <h4>1. Get the content from the internet with the module requests</h4>
+        <p><a href="https://docs.python-requests.org/en/master/">docs.python-requests.org</a></p>
         <p class="python">import requests<br>
-          r = requests.get("https://www.example.com")<br>
+          r = requests.get("http://python.beispiel.programmierenlernen.io/")<br>
           print(r.status_code) #check the status code<br>
           print(r.headers) #show the header<br>
           print(r.text) #show the raw text<br>
         </p>
         <h4>2. Grab the information from the data with the module bs4</h4>
+        <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">www.crummy.com/software/BeautifulSoup/bs4/doc/</a></p>
         <p class="python">from bs4 import BeautifulSoup<br>
           doc = BeautifulSoup(r.text, "html.parser")<br>
           print(doc) #shows the html data<br>
           doc.select(".card") #shows all elements with the class card<br>
           for card in doc.select(".card"):<br>
-          emoji = card.select_one(".emoji").text #saves one emoji symbol<br>
-          content = card.select_one(".card-text").text #saves one card text<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;emoji = card.select_one(".emoji").text #saves one emoji symbol<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;content = card.select_one(".card-text").text #saves one card text<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;title = card.select(".card-title span")[1].text #saves the title<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;image = card.select_one("img").attrs["src"] #saves the image<br>
           <br>
-          print(emoji)<br>
-          print(content)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print(image)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print(emoji)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print(content)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print(title)<br>
           <br>
-        </p> 
+          print(card)
+        </p>
+        <h4>3. Example (grab the data from the card information and output it to a file)</h4>
+        <p>
+          import requests<br>
+from bs4 import BeautifulSoup<br>
+from urllib.parse import urljoin<br>
+import time<br>
+<br>
+class CrawledArticle(): #class for articles<br>
+    def __init__(self, title, emoji, content, image):<br>
+        self.title = title<br>
+        self.emoji = emoji<br>
+        self.content = content<br>
+        self.image = image<br>
+        <br>
+class ArticleFetcher(): #class for grab data from articles<br>
+    def fetch(self):<br>
+        url = "http://python.beispiel.programmierenlernen.io/"<br>
+        <br>
+        while url != "":<br>
+            print(url)<br>
+            time.sleep(1)<br>
+            r = requests.get(url)<br>
+            doc = BeautifulSoup(r.text, "html.parser")<br>
+            <br>
+            for card in doc.select(".card"):<br>
+                emoji = card.select_one(".emoji").text #saves one emoji symbol<br>
+                content = card.select_one(".card-text").text #saves one card text<br>
+                title = card.select(".card-title span")[1].text #saves the title<br>
+                image = urljoin(url, card.select_one("img").attrs["src"]) #saves the image<br>
+<br>
+                yield CrawledArticle(title, emoji, content, image)<br>
+<br>
+            next_button = doc.select_one(".navigation .btn")<br>
+            if next_button:<br>
+                next_href = next_button.attrs["href"]<br>
+                next_href = urljoin(url, next_href)<br>
+                url = next_href<br>
+            else:<br>
+                url = ""
+        </p>
+        <p>
+          import csv<br>
+fetcher = ArticleFetcher()<br>
+<br>
+with open('crawler_output.csv', 'w', newline='', encoding='utf-8') as csvfile:<br>
+    articlewriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)<br>
+    <br>
+    counter = 0<br>
+    for article in fetcher.fetch():<br>
+        if counter == 8:<br>
+            break<br>
+        counter += 1<br>
+        articlewriter.writerow([article.emoji, article.title, article.image, article.content])
+        </p>
       </div>
     </div>
 
