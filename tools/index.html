@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="contact">
+  <body class="tools">
     <!-- Header -->
     <header>
       <a href="/" class="logo">ESEMBICO</a>
@@ -23,9 +23,9 @@
           <li><a href="/robotics">Robotics</a></li>
           <li><a href="/coding">Coding</a></li>
           <li><a href="/prototypes">Proto</a></li>
-          <li><a class="active" href="/contact">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
           <li><a href="/recommendations">Rec</a></li>
-          <li><a href="/tools">Tools</a></li>
+          <li><a class="active" href="/tools">Tools</a></li>
         </ul>
       </nav>
       <div class="clearfix"></div>
@@ -54,68 +54,33 @@
     <div class="row">
       <div class="image">
         <img
-          src="/static/images/contact/1.webp"
+          src="/static/images/tools/tools_1.jpg"
           style="max-width: 100%"
-          alt="contact_1"
+          alt="tools_1"
         />
       </div>
       <div class="image">
         <img
-          src="/static/images/contact/2.webp"
+          src="/static/images/tools/tools_2.jpg"
           style="max-width: 100%"
-          alt="contact_2"
+          alt="tools_2"
         />
       </div>
     </div>
 
     <!-- The flexible grid (content) -->
-    <div class="row">
-      <div class="main-main contact">
-        <div class="container contact">
-          <h2>Contact Us</h2>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">First Name</span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">Last Name</span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">Email</span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox textarea">
-                <textarea required="required"></textarea>
-                <span class="text">Type your message here...</span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row100">
-            <div class="col">
-              <input type="submit" value="Send" />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="side">
+
+      <form name="uiccalculation">
+        <h3 class="tools">1. Calculate the UIC Number (luhn algorithm)</h3>
+        <hr class="tools-hr">
+          <label for="input-value">Enter 11 numbers</label><br>
+          <input type="text" id="input-value" name="input-value" maxlength="11"><br>
+          <input type="button" value="Calculate" onclick="calculate()">         
+          <input type="text" id="uic" name="uic" disabled>
+      </form>
+      <!-- js -->
+      <script src="1_calculate_uic_number.js"></script>
     </div>
 
     <!-- Footer -->
