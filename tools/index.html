@@ -72,15 +72,21 @@
     <div class="side">
 
       <form name="uiccalculation">
-        <h3 class="tools">1. Calculate the UIC Number (luhn algorithm)</h3>
-        <hr class="tools-hr">
-          <label for="input-value">Enter 11 numbers</label><br>
+        <h3 class="tools">1. Calculate the UIC Number (based on luhn algorithm)</h3>        
+          <label for="input-value">Enter 11 digits</label><br>
           <input type="text" id="input-value" name="input-value" maxlength="11"><br>
           <input type="button" value="Calculate" onclick="calculate()">         
-          <input type="text" id="uic" name="uic" disabled>
+          <!-- <input type="text" id="uic" name="uic" disabled> -->
+          <p>Check digit:
+            <span id="check_number"></span>
+          </p>
+          <p>Generated UIC number:
+            <span id="uic"></span>
+          </p>
       </form>
       <!-- js -->
       <script src="1_calculate_uic_number.js"></script>
+      <hr class="hr">
     </div>
 
     <!-- Footer -->
