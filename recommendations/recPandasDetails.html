@@ -29,6 +29,7 @@
           <li><a href="/prototypes">Proto</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a class="active" href="/recommendations">Rec</a></li>
+          <li><a href="/tools">Tools</a></li>
         </ul>
       </nav>
       <div class="clearfix"></div>
@@ -57,31 +58,34 @@
           <p> <a class="link" href="https://pandas.pydata.org/">pandas.pydata.org</a></p>
             
           <h4>How to use with jupyter</h4>
-            <ul>
-                <li>import pandas as pd - import the pandas module</li>
-                <li>df = pd.read_excel("Excelfile.xlsx") - read excel file</li>
-                <li>df.head() - shows the head and the first 5 rows of the file</li>
-                <li>df - shows the file content in a table</li>
-                <li>df.info() - shows the details of the data</li>
-                <li>df["incomes"] - shows only the data of the column</li>
-                <li>df["year"] != "sum:" - shows True or False</li>
-                <li>df2 = df[df["year"] != "sum:"] - deletes the row with "Sum:" and save the data in a new dataframe variable</li>
-                <li>df3 = df2.drop(8) - deletes the row 8 solution 1</li>
-                <li>df3 = df2[df2["year"].notnull()] - deletes the row 8 solution 2</li>
-                <li>profit = df3["incomes"] - df3["outcomes"] - calculate the values and save in the variable</li>
-                <li>ax.plot(df3["year"], profit, label="profit") - shows the profit</li>
-                <li>for index, row in df3.iterrows(): print row - shows the data of the data frame</li>
-                <li>print(row["year"]) - filters and shows the data of the rows</li>
-                <li>df.values - shows the data in an array</li>
-                <li>df.values[0] - shows the first row of the array</li>
-                <li>df.values[0][0] - shows the first value in the first row</li>
-                <li>print(len(df)) - shows the number of rows</li>
-                <li>print(len(df[df["year"] == 2012])) - shows the number of rows with the value 2012 for year</li>
-                <li>df = pd.read_excel("Excelfile.xlsx", sheet_name=["Tabelle1", "Tabelle2"]) - reads excel file with the 2 sheets and outputs a dictionary</li>
-                <li>df_Tabelle1 = df["Tabelle1"] - shows only the sheet Tabelle1</li>
+          <p>
+            import pandas as pd #import the pandas module<br>
+            df = pd.read_excel("test.xlsx") #read excel file<br>
+            len(df) #shows the number of rows<br>
+            df.head() #shows the head and the first 5 rows of the file<br>
+            df #shows the file content in a table<br>
+            df.iloc[0] #shows the first entry
+            df.info() #shows the details of the data<br>
+            df["incomes"] #shows only the data of the column<br>
+            df["year"] != "sum:" #shows True or False<br>
+            df2 = df[df["year"] != "sum:"] #deletes the row with "Sum:" and save the data in a new dataframe variable<br>
+            df3 = df2.drop(8) #deletes the row 8 solution 1<br>
+            df3 = df2[df2["year"].notnull()] #deletes the row 8 solution 2<br>
+            profit = df3["incomes"] - df3["outcomes"] #calculate the values and save in the variable<br>
+            ax.plot(df3["year"], profit, label="profit") #shows the profit<br>
+            for index, row in df3.iterrows():<br>
+                print row #shows the data of the data frame<br>
+                print(row["year"]) #filters and shows the data of the rows<br>
+            df.values #shows the data in an array<br>
+            df.values[0] #shows the first row of the array<br>
+            df.values[0][0] #shows the first value in the first row<br>
+            print(len(df)) #shows the number of rows<br>
+            print(len(df[df["year"] == 2012])) #shows the number of rows with the value 2012 for year<br>
+            df = pd.read_excel("Excelfile.xlsx", sheet_name=["Tabelle1", "Tabelle2"]) #reads excel file with the 2 sheets and outputs a dictionary<br>
+            df_Tabelle1 = df["Tabelle1"] #shows only the sheet Tabelle1<br>
+          </p>
 
-            </ul>
-          <h4>Example</h4>
+          <h4>Example 1</h4>
             <p><strong>Filter the data</strong></p>
             <p>
                 import pandas as pd<br>
@@ -112,6 +116,32 @@
             <p>
                 for index, row in df3.iterrows():<br>
                 print(row)<br>
+            </p>
+          <h4>Example 2</h4>
+            <p>Read the file and show how often the name was given</p>
+            <p>
+              name = "Anna" #search value 1<br>
+              gender = "F" #search value 2<br>
+              state = "CA" #search value 3
+            </p>
+            <p>
+              import pandas as pd #import pandas<br>
+              df = pd.read_csv("../data/names.csv") #read the data<br>
+              df.head() #show the head for the orientation<br>
+              <img src="/static/images/rec/Pandas_Example2a.png" width="301px" height="172px" alt="Pandas_Example2a"/> 
+            </p>
+            <p>
+              df2 = df[df["Name"] == name] #first filter<br>
+              df3 = df2[df2["Gender"] == gender] #second filter<br>
+              df4 = df3[df3["State"] == state] #third filter<br>
+              df5 = df4.sort_values("Year") #sort the data<br>
+              <img src="/static/images/rec/Pandas_Example2b.png" width="301px" height="172px" alt="Pandas_Example2b"/> 
+            </p>
+            <p>
+              %matplotlib inline<br>
+              import matplotlib.pyplot as plt #import matplotlib<br>
+              <br>
+              plt.plot(df5["Year"], df5["Count"]) #show the data
             </p>
         </div>
       </div>

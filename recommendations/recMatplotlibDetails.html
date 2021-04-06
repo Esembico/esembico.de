@@ -29,6 +29,7 @@
           <li><a href="/prototypes">Proto</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a class="active" href="/recommendations">Rec</a></li>
+          <li><a href="/tools">Tools</a></li>
         </ul>
       </nav>
       <div class="clearfix"></div>
@@ -57,52 +58,54 @@
           <p> <a class="link" href="https://matplotlib.org/">matplotlib.org</a></p>
             
           <h4>How to use with jupyter</h4>
-            <ul>
-                <li>%matplotlib inline - for grafics which can be saved automatically</li>
-                <li>%matplotlib notebook - interactive grafic</li>
-                <li>within interactive grafic you can: zoom, shift, scale, download and save</li>
-                <li>fig - figure of the whole grafic</li>
-                <li>ax - axes of the graph</li>
-                <li>dpi - resolution of the grafic</li>
-                <li>fig.savefig("graph_1.png") - saves grafic as image</li>
-                <li>fig.savefig("graph_1.png", transpartent = True) - for transparent and not white image</li>
-                <li>ax.set_title("Title") - titel for the grafic</li>
-                <li>ax.set_xlabel("xlabel") - description for the x axe</li>
-                <li>ax.set_ylabel("ylabel") - description for the y axe</li>
-                <li>ax.set_ylim([0, 10]) - sets range for the y axe</li>
-                <li>ax.set_xlim([0, 10]) - sets range for the x axe</li>
-                <li>ax.legend() - shows legend for the lines</li>
-                <li>ax.legend(loc=1) - shows legend in the upper right corner</li>
-                <li>With seaborn (library for graphics in Python) you can display better graphics</li>
-                <li>sns.set_style("whitegrid") - differnt views possible with white, whitegrid, dark, darkgrid</li>
-                <li>ax.plot(x, y, label="new customers", color="green") - changes line color with the attribute color, you can also write red as (1, 0, 0)</li>
-                <li>ax.set_facecolor((0.95, 0.95, 0.95)) - changes background color to grey</li>
-                <li>ax.plot(x, y, label="Label", linestyle=":") - sets different line styles with linestyle (":", "-.", "--")</li>
-                <li>ax.plot(x, y, label="Label", linewidth=4) - sets the width of the line</li>
-                <li>ax.plot(x, y, label="Label", marker="o") - sets a marker for the values</li>
-                <li>ax.plot(x, y, label="Label", marker="o", markerfacecolor=(1, 0, 0)) - sets color for the marker</li>
-                <li>ax.plot(x, y, label="Label", marker="o", markersize=8) - sets the size of the marker</li>
-                <li>ax.set_xticks([1, 3, 5]) - shows only the requested numbers</li>
-                <li>ax.set_xticklabels(["year 1", "year 2", "year 3"]) - shows the requested labels</li>
-                <li>ax.set_xticklabels(["year 1"], rotation=45) - shows the requested labels rotated</li>
-                <li>ax.bar(x, y) - shows bar chart</li>
-                <li>ax.bar(x, y, tick_label=["year 1"]) - shows label for the bars</li>
-                <li>ax.bar(x, y, width=0.4) - changes the width of the single bars</li>
-                <li>ax.barh(x,  y) - shows a horizontal bar diagram</li>
-                <li>ax.bar(x, y, width=-0.4 align="edge")&nbsp;ax.bar(x, y2, width=0.4 align="edge")  - shows the bars in line; makes sense for to compared bars next to it</li>
-                <li>ax.pie([100, 50]) - shows a pie chart</li>
-                <li>ax.axis("equal") - shows a precise circle</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"]) - displays the labels</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], startangle=90) - rotates the circle</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], explode=[0, 0, 0.1]) - shows the third piece in focus</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], shadow=True) - shows a shadow</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%i") - shows the values in percent</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%.1f%%") - shows the comma values with percent character</li>
-                <li>ax.pie([100, 50], labels=["option 1", "option 2"], colors=[(1, 0, 0), (0, 1, 0)]) - define the colors for the pieces</li>
-                <li>ax.scatter([100, 50]) - shows a dot chart</li>
-                <li>fig, ax = plt.subplots(figsize=[5, 3]) - changes the size of the image and not the labels</li>
+          <p>
+            %matplotlib inline #for grafics which can be saved automatically<br>
+%matplotlib notebook #interactive grafic<br>
+within interactive grafic you can: zoom, shift, scale, download and save<br>
+fig #figure of the whole grafic<br>
+ax #axes of the graph<br>
+dpi #resolution of the grafic<br>
+fig.savefig("graph_1.png") #saves grafic as image<br>
+fig.savefig("graph_1.png", transpartent = True) #for transparent and not white image<br>
+ax.set_title("Title") #titel for the grafic<br>
+ax.set_xlabel("xlabel") #description for the x axe<br>
+ax.set_ylabel("ylabel") #description for the y axe<br>
+ax.set_ylim([0, 10]) #sets range for the y axe<br>
+ax.set_xlim([0, 10]) #sets range for the x axe<br>
+ax.legend() #shows legend for the lines<br>
+ax.legend(loc=1) #shows legend in the upper right corner<br>
+With seaborn (library for graphics in Python) you can display better graphics<br>
+sns.set_style("whitegrid") #differnt views possible with white, whitegrid, dark, darkgrid<br>
+ax.plot(x, y, label="new customers", color="green") #changes line color with the attribute color, you can also write red as (1, 0, 0)<br>
+ax.set_facecolor((0.95, 0.95, 0.95)) #changes background color to grey<br>
+ax.plot(x, y, label="Label", linestyle=":") #sets different line styles with linestyle (":", "-.", "--")<br>
+ax.plot(x, y, label="Label", linewidth=4) #sets the width of the line<br>
+ax.plot(x, y, label="Label", marker="o") #sets a marker for the values<br>
+ax.plot(x, y, label="Label", marker="o", markerfacecolor=(1, 0, 0)) #sets color for the marker<br>
+ax.plot(x, y, label="Label", marker="o", markersize=8) #sets the size of the marker<br>
+ax.set_xticks([1, 3, 5]) #shows only the requested numbers<br>
+ax.set_xticklabels(["year 1", "year 2", "year 3"]) #shows the requested labels<br>
+ax.set_xticklabels(["year 1"], rotation=45) #shows the requested labels rotated<br>
+ax.bar(x, y) #shows bar chart<br>
+ax.bar(x, y, tick_label=["year 1"]) #shows label for the bars<br>
+ax.bar(x, y, width=0.4) #changes the width of the single bars<br>
+ax.barh(x,  y) #shows a horizontal bar diagram<br>
+ax.bar(x, y, width=-0.4 align="edge")&nbsp;ax.bar(x, y2, width=0.4 align="edge")  #shows the bars in line; makes sense for to compared bars next to it<br>
+ax.pie([100, 50]) #shows a pie chart<br>
+ax.axis("equal") #shows a precise circle<br>
+ax.pie([100, 50], labels=["option 1", "option 2"]) #displays the labels<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], startangle=90) #rotates the circle<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], explode=[0, 0, 0.1]) #shows the third piece in focus<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], shadow=True) #shows a shadow<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%i") #shows the values in percent<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], autopct="%.1f%%") #shows the comma values with percent character<br>
+ax.pie([100, 50], labels=["option 1", "option 2"], colors=[(1, 0, 0), (0, 1, 0)]) #define the colors for the pieces<br>
+ax.scatter([100, 50]) #shows a dot chart<br>
+fig, ax = plt.subplots(figsize=[5, 3]) #changes the size of the image and not the labels<br>
+<br>
 
-            </ul>
+          </p>
+
           <h4>Example</h4>
             <p>
                 %matplotlib inline<br>
