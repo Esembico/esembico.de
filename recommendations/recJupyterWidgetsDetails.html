@@ -66,7 +66,7 @@
                 <li>etc.</li>
             </ul>
 
-            <h4>Example</h>
+            <h4>Example 1</h4>
               <p>1. read data from a csv file and show the head</p>
               <p>import pandas as pd<br>
                 df = pd.read_csv("./../data/meteorite-landings.csv")<br>
@@ -97,7 +97,52 @@
                 ax.gridlines()<br>
                 plt.show()
               </p>
-
+            <h4>Example 2</h4>
+            <p>1. Create a form with input/select fields<br>
+            and save the data in an output file.</p>
+            <p>
+              import csv<br>
+import ipywidgets as widgets<br>
+from IPython.display import display<br>
+<br>
+firstname = widgets.Text(description="Firstname:", value="")<br>
+display(firstname)<br>
+<br>
+lastname = widgets.Text(description="Lastname:", value="")<br>
+display(lastname)<br>
+<br>
+subject_options = [<br>
+    "---",<br>
+    "Science",<br>
+    "Technology",<br>
+    "Engineering",<br>
+    "Mathematics"<br>
+]<br>
+<br>
+subject = widgets.Dropdown(description="Subject:", options=subject_options)<br>
+display(subject)<br>
+<br>
+button = widgets.Button(description="Save")<br>
+display(button)<br>
+<br>
+def button_click(event):<br>
+    firstname_value = firstname.value<br>
+    lastname_value = lastname.value<br>
+    subject_value = subject.value<br>
+    <br>
+    if firstname_value != "" and lastname_value != "" and subject_value != "---":<br>
+        with open(".students.csv", "a", newline="", encoding="utf-8") as f:<br>
+            writer = csv.writer(f, delimiter=";")<br>
+            writer.writerow([firstname_value, lastname_value, subject_value])        <br>
+        print("Data saved in file")<br>
+        firstname.value = ""<br>
+        lastname.value = ""<br>
+        subject.value = "---"<br>
+    else:<br>
+        print("Please fill all fields with values")<br>
+<br>
+button.on_click(button_click)
+            </p>            
         </div>
       </div>
     <!-- Footer -->
