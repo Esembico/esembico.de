@@ -68,7 +68,7 @@
                 <li>ax.add_image(osm_tiles, 7) - creates the osm data with the precision of 7 in a map</li>
 
             </ul>
-          <h4>Example</h4>
+          <h4>Example 1</h4>
             <p><strong>Show Germany with OpenStreetMap</strong></p>
             <p>                
                 df = pd.read_csv("file.csv")<br>
@@ -86,6 +86,37 @@
                 ax.add_image(osm_tiles, 3)<br>
                 plt.show()<br>
                 import pan<br>                
+            </p>
+            <h4>Example 2</h4>
+            <p>1. read data from a csv file and show the head</p>
+            <p>import pandas as pd<br>
+              df = pd.read_csv("./../data/meteorite-landings.csv")<br>
+              df.head()</p>
+            <p>2. Save the data in variables (dataframes)</p>
+            <p>df2 = df[df["reclat"].notnull()]<br>
+              df3 = df2[df2["reclong"].notnull()]<br>
+              long = df3["reclong"]<br>
+              lat = df3["reclat"]<br>
+            </p>
+            <p>3. Show the relevant data in a picture/map/card</p>
+            <p>%matplotlib inline<br>
+              import matplotlib.pyplot as plt<br>
+              import cartopy.crs as ccrs<br>
+              import cartopy.feature as cfeature<br>
+              <br>
+              fig = plt.figure(figsize=(15, 20))<br>
+              ax = plt.axes(projection=ccrs.Robinson())<br>
+              <br>
+              ax.set_global()<br>
+              ax.coastlines(resolution="50m")<br>
+              <br>
+              ax.plot(long, lat, linestyle=" ", marker="X", transform=ccrs.PlateCarree(), color=(0, 0, 0), alpha=0.2)<br>
+              <br>
+              ax.add_feature(cfeature.OCEAN, zorder=0)<br>
+              ax.add_feature(cfeature.LAND, zorder=0)<br>
+              ax.add_feature(cfeature.BORDERS, zorder=0, edgecolor='gray')<br>
+              ax.gridlines()<br>
+              plt.show()
             </p>
             
         </div>
