@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esembico</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/style.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rec">
+    <!-- Header -->
+    <header>
+      <a href="/" class="logo">ESEMBICO</a>
+      <div class="menu-toggle"></div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/robotics">Robotics</a></li>
+          <li><a href="/coding">Coding</a></li>
+          <li><a href="/prototypes">Proto</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a class="active" href="/recommendations">Rec</a></li>
+          <li><a href="/tools">Tools</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+    <!-- Image -->
+    <div class="row">
+      <div class="image">
+        <img
+          src="../static/images/rec/1.webp"
+          style="max-width: 100%"
+          alt="rec_1"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../static/images/rec/2.jpg"
+          style="max-width: 100%"
+          alt="rec_2"
+        />
+      </div>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="main-main">
+          <h4>Types of Data</h4>
+          <ul>
+            <li>Numerical - e.g. page load times</li>
+            <li>Categorical - e.g. product category</li>
+            <li>Ordinal - e.g. movie ratings</li>
+          </ul>
+          <h4>Mean</h4>
+          <p>Sum / number of samles<br>
+          1 + 4 + 5 + 4 + 8 = 22 / 5 = 4.4</p>
+          <h4>Median</h4>          
+          <p>Sort the values, take the value in the midpoint<br>
+          1, 4, <span style="font-size:35px">4</span>, 5, 8</p>
+          <h4>Mode</h4>
+          <p>The most common value in a data set<br>
+          1: 1, 4: 2, 5: 1, 8: 1</p>
+          <h4>Variance</h4>
+          <p>Measures how "spread-out" the data is<br>
+            Differences from the mean:<br>
+            1 - 4.4 = - 3.4<br>
+            4 - 4.4 = - 0.4<br>
+            5 - 4.4 = 0.6<br>
+            4 - 4.4 = - 0.4<br>
+            8 - 4.4 = 3.6<br>
+            Find the squared differences:<br>
+            (11.56, 0.16, 0.36, 0.16, 12.96)<br>
+            Find the average of the squared differences:<br>
+            (11.56 + 0.16 + 0.36 + 0.16 + 12.96) / 5 = 5.04
+          </p>
+          <h4>Standard Deviation</h4>
+          <p>Square root of the variance<br>
+          Root of 5.04 = 2.24</p>
+          <h4>Probability Density function</h4>
+          <p>Gives you the probability of a data point<br>
+          falling within some given range of a given value</p>
+          <a></a>
+          <h4>Probabilty Mass Function</h4>
+          <p>Probability of given discret values</p>
+          <h4>Data Distributions</h4>
+          <ul>
+            <li>Uniform Distibution</li>
+            <li>Normal / Gaussian</li>
+            <li>Exponential PDF / "Power Law"</li>
+            <li>Binomial Probability Mass Function</li>
+            <li>Poisson Probability Mass Function</li>
+          </ul>
+          <h4>Covariance</h4>
+          <p>Measures how two variables vary in tandem<br>
+          from their means</p>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <h5><a href="/">esembico</a></h5>
+    </footer>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
