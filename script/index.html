@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="contact">
+  <body class="script">
     <!-- Header -->
     <header>
       <a href="/" class="logo">ESEMBICO</a>
@@ -23,9 +23,9 @@
           <li><a href="/robotics">Robotics</a></li>
           <li><a href="/coding">Coding</a></li>
           <li><a href="/prototypes">Proto</a></li>
-          <li><a class="active" href="/contact">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
           <li><a href="/recommendations">Rec</a></li>
-          <li><a href="/tools">Tools</a></li>          
+          <li><a href="/tools">Tools</a></li>
         </ul>
       </nav>
       <div class="clearfix"></div>
@@ -54,77 +54,54 @@
     <div class="row">
       <div class="image">
         <img
-          src="/static/images/contact/1.webp"
+          src="/static/images/script/script_1.jpg"
           style="max-width: 100%"
-          alt="contact_1" usemap="#script"
+          alt="script_1"
         />
-        <map name="script">
-          <area shape="circle" coords="255,186,5" href="/script">
-        </map>
       </div>
       <div class="image">
         <img
-          src="/static/images/contact/2.webp"
+          src="/static/images/script/script_2.jpg"
           style="max-width: 100%"
-          alt="contact_2"
+          alt="script_2"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="/static/images/script/script_3.jpg"
+          style="max-width: 100%"
+          alt="script_3"
         />
       </div>
     </div>
 
     <!-- The flexible grid (content) -->
     <div class="row">
-      <div class="main-main contact">
-        <div class="container contact">
-          <h2>Contact Us</h2>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">First Name</span>
-                <span class="line"></span>
-              </div>
-            </div>
+      <div class="main-main">
+        <div class="container script">
+          <div class="panel active" style="background-image: url(/static/images/script/4.png);">
+            <h3>Part 1</h3>
+            <p>description part 1</p>
           </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">Last Name</span>
-                <span class="line"></span>
-              </div>
-            </div>
+          <div class="panel" style="background-image: url(/static/images/script/4.png);">
+            <h3>Part 2</h3>
           </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox">
-                <input type="text" name="" required="required" />
-                <span class="text">Email</span>
-                <span class="line"></span>
-              </div>
-            </div>
+          <div class="panel" style="background-image: url(/static/images/script/4.png);">
+            <h3>Part 3</h3>
           </div>
-          <div class="row100">
-            <div class="col">
-              <div class="inputBox textarea">
-                <textarea required="required"></textarea>
-                <span class="text">Type your message here...</span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row100">
-            <div class="col">
-              <input type="submit" value="Send" />
-            </div>
+          <div class="panel" style="background-image: url(/static/images/script/4.png);">
+            <h3>Part 4</h3>
           </div>
         </div>
       </div>
     </div>
+      <!-- js -->
+      <script src="/static/js/script.js"></script>
 
     <!-- Footer -->
     <footer>
       <h5><a href="/">esembico</a></h5>
     </footer>
-    <script src="/static/js/app.js"></script>
+    
   </body>
 </html>

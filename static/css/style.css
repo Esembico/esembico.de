@@ -63,6 +63,13 @@ body.tools {
   --main-color: #ffffff;
 }
 
+body.script {
+  --main-bg-color: #d33488;
+  --secondary-bg-color: #00a2e8;
+  --logo-color: var(--secondary-bg-color);
+  --main-color: #ffffff;
+}
+
 p {
   font-size: 15px;
 }
@@ -533,6 +540,58 @@ input[type="submit"] {
   margin-top: 10px;
   color: #fff;
 }
+/* Script */
+.container.script {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel p {
+  font-size: 15px;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active p{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
 /* Code highlighting */
 pre {
   tab-size: 4;
@@ -586,6 +645,13 @@ code.line::before {
   .container.proto .card .contentBx:before {
     top: 0;
     bottom: 0;
+  }
+  .container.script {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+      display: none;
   }
 }
 
