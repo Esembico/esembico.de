@@ -675,3 +675,63 @@ input[type=button] {
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* SNOW */
+
+.snow2::before, .snow2::after,
+.snow::before, .snow::after {
+  content: "";
+  position: fixed;
+  top: -3000%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.01);
+  background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+  background-size: 30%;
+  animation-name: move-snow;
+  animation-duration: 500s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+
+.snow2::before {
+  filter: blur(1px);
+  opacity: 0.8;
+}
+.snow2::after {
+  filter: blur(2px);
+  top: -1500%;
+  background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+  background-size: 90%;
+       animation-duration: 200s;
+}
+
+.snow::before {
+  filter: blur(4px);
+  opacity: 0.8;
+  top: -2500%;
+  background-size: 60%;
+  animation-duration: 400s;
+  z-index: 0;
+}
+.snow::after {
+  filter: blur(2px);
+  opacity: 0.8;
+  top: -2000%;
+  background-image: url(https://laviwebfiles.com/stage/codepen/4-2-white-snow-png.png);
+  background-size: 70%;
+  -webkit-animation-duration: 300s;
+          animation-duration: 300s;
+  z-index: -1;
+}
+
+@keyframes move-snow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(70%);
+  }
+}
